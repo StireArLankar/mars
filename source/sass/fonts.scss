@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "PlayfairDisplay";
+  src: local("PlayfairDisplay Bold"),
+    local("PlayfairDisplay-Bold"),
+    url("../fonts/PlayfairDisplay-Bold.woff2") format("woff2"),
+    url("../fonts/PlayfairDisplay-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PlayfairDisplay";
+  src: local("PlayfairDisplay BoldItalic"),
+    local("PlayfairDisplay-BoldItalic"),
+    url("../fonts/PlayfairDisplay-BoldItalic.woff2") format("woff2"),
+    url("../fonts/PlayfairDisplay-BoldItalic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Circe";
+  src: local("Circe Regular"),
+    local("Circe-Regular"),
+    url("../fonts/circe-regular.woff2") format("woff2"),
+    url("../fonts/circe-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Circe";
+  src: local("Circe Bold"),
+    local("Circe-Bold"),
+    url("../fonts/circe-bold.woff2") format("woff2"),
+    url("../fonts/circe-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IntroScriptR";
+  src: local("IntroScriptR H2Base"),
+    local("IntroScriptR-H2Base"),
+    url("../fonts/introscriptr-h2base.woff2") format("woff2"),
+    url("../fonts/introscriptr-h2base.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

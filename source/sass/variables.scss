@@ -1,0 +1,31 @@
+$white-color: #ffffff;
+$black-color: #000000;
+$red-color: #f50049;
+$pink-color: #fbebea;
+$light-grey: #e7e7e7;
+$medium-grey: #dedede;
+$dark-grey: #898989;
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+$mobile-width: 320px;
+$padding-mobile: 20px;
+
+$tablet-width: 768px;
+$padding-tablet-base: 20px;
+
+$max-desktop-width: 1366px;
+$padding-desktop-base: 74px;
+$desktop-width: ($max-desktop-width + $tablet-width) / 2;
+
+$flex-item-width: 45%;
+
+$width-diff: $max-desktop-width - $tablet-width;
+$pad-diff: $padding-desktop-base - $padding-tablet-base;
+
+$temp: $padding-tablet-base - $tablet-width * $pad-diff/ $width-diff;
+$temp1: 100% * $pad-diff / $width-diff;
+
+$padding-tablet: calc(#{$temp} + #{$temp1});
+$padding-desktop: calc(#{$temp} + #{$temp1});
