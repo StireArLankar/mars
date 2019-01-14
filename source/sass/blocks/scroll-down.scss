@@ -9,11 +9,10 @@
   cursor: pointer;
   bottom: 5%;
   left: 50%;
-  transform: translateX(-50%);
   border-radius: 50%;
   background-color: rgba(255, 0, 0, 0.5);
 
-  transform: translateY(200px);
+  transform: translate(-50%, 200px);
   transition: transform 1s ease-in;
 
   display: flex;
@@ -21,7 +20,7 @@
   align-items: center;
 
   &--show {
-    transform: translateY(0px);
+    transform: translate(-50%, 0);
   }
 
   @media (min-width: $tablet-width) {
@@ -46,15 +45,13 @@
   width: $size;
   height: $size;
 
+  fill: $white-color;
+
   @media (min-width: $tablet-width) {
     $size: 22px;
 
     width: $size;
     height: $size;
   }
-}
-
-.scroll-down__svg {
-  fill: $white-color;
 }
 

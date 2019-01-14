@@ -175,8 +175,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
+    display: flex;
+    flex-direction: column;
     transform: rotate(0deg);
 
     &::before {
@@ -185,16 +185,31 @@
     }
 
     & span {
+      writing-mode: vertical-rl !important;
+      text-orientation: mixed;
       transform: rotate(180deg);
     }
   }
 }
 
+.colony__item--open .colony__btn {
+  & span {
+    @media (max-width: $desktop-width - 1) {
+      max-width: 200px;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-height: 200px;
+    }
+  }
+
+  &::before {
+    background-color: $red-color;
+  }
+}
+
 .colony__item:last-child {
   @media (max-width: $tablet-width - 1) {
-    display: flex;
-    flex-direction: column;
-
     .colony__btn {
       order: 2;
     }
@@ -223,21 +238,6 @@
         order: -1;
       }
     }
-  }
-}
-.colony__item--open .colony__btn {
-  & span {
-    @media (max-width: $desktop-width - 1) {
-      max-width: 200px;
-    }
-
-    @media (min-width: $desktop-width) {
-      max-height: 200px;
-    }
-  }
-
-  &::before {
-    background-color: $red-color;
   }
 }
 
