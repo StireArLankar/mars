@@ -1,0 +1,60 @@
+.scroll-down {
+  $size: 59px;
+
+  width: $size;
+  height: $size;
+
+  position: fixed;
+  z-index: 10;
+  cursor: pointer;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background-color: rgba(255, 0, 0, 0.5);
+
+  transform: translateY(200px);
+  transition: transform 1s ease-in;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &--show {
+    transform: translateY(0px);
+  }
+
+  @media (min-width: $tablet-width) {
+    $size: 75px;
+
+    width: $size;
+    height: $size;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 8%;
+  }
+
+  @media (min-width: $max-desktop-width) {
+    left: calc(50% - #{$desktop-width / 2});
+  }
+}
+
+.scroll-down__svg {
+  $size: 20px;
+
+  width: $size;
+  height: $size;
+
+  @media (min-width: $tablet-width) {
+    $size: 22px;
+
+    width: $size;
+    height: $size;
+  }
+}
+
+.scroll-down__svg {
+  fill: $white-color;
+}
+

@@ -2,31 +2,31 @@ body {
   margin: 0;
   padding: 0;
   min-width: 320px;
+  position: relative;
+  background-image: url("../img/pattern.png");
+  background-size: 50px 50px;
+  background-repeat: repeat;
+  background-position: 50% 50%;
 
-  font-size: 20px;
-  font-family: "Circe", "Arial", sans-serif;
-  font-weight: 400;
-  text-align: left;
-  line-height: 1.3;
+  @include text(20px);
   color: $black-color;
-  background-color: $pink-color;
 
   &::after {
-    content: "";
+    // content: '';
     position: absolute;
-    //background-image: url("../img/fon1.png");
-    background-image: url("../img/fon2.png");
-    //background-image: url("../img/fon3.png");
+    // background-image: url("../img/fon320.jpg");
+    // background-image: url("../img/fon750.jpg");
+    background-image: url("../img/fon1170.jpg");
     opacity: 0.4;
     z-index: 1;
     top: 0;
     left: 0;
-    //width: 320px;
-    //height: 6541px;
-    width: 768px;
-    height: 5822px;
-    //width: 1366px;
-    //height: 9290px;
+    // width: 320px;
+    // height: 7321px;
+    // width: 765px;
+    // height: 5785px;
+    width: 1600px;
+    height: 6102px;
   }
 }
 
@@ -56,6 +56,12 @@ html {
   border: 0;
 }
 
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .btn {
   border: 0;
   outline: 0;
@@ -64,21 +70,39 @@ html {
   cursor: pointer;
 }
 
-.redbtn {
-  display: block;
-  font-size: 13px;
-  font-weight: 400;
-  font-family: "Circe", "Arial", sans-serif;
-  text-transform: uppercase;
-  line-height: 2;
-  padding: 12px 20px 13px;
-  background-color: $red-color;
+.title {
+  @include text(36px, 700, 1.17, 0);
+  white-space: pre-wrap;
+
+  &--red {
+    color: $red-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 48px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 60px;
+  }
+
+  @media (min-width: $max-desktop-width) {
+    font-size: 60px;
+  }
+}
+
+.cute-btn {
+  @include text(18px, 700);
+  width: 100%;
   text-align: center;
-  color: $white-color;
-  border-radius: 25px;
+  border-radius: 50px;
+  padding: 18px 10px;
+  background-color: $white-color;
+  color: $red-color;
+  transition: box-shadow 0.3s ease-in-out;
 
   &:hover {
-    box-shadow: 0 5px 10px 0 rgba($red-color, 0.3);
+    box-shadow: 0px 0px 27px 0px rgba(255, 255, 255, 0.5);
   }
 }
 

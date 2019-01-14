@@ -1,0 +1,129 @@
+.faq {
+  position: relative;
+}
+
+.faq__wrapper {
+  max-width: $max-desktop-width;
+  padding: 42px $padding-mobile 67vw;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    padding: 48px $padding-tablet 37vw;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 75px $padding-desktop 280px;
+  }
+
+  @media (min-width: $max-desktop-width) {
+    margin: 0 auto;
+    padding-right: $padding-desktop-base;
+    padding-left: $padding-desktop-base;
+  }
+}
+
+.faq__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 11%;
+  }
+}
+
+.faq__item {
+  margin-top: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 44px;
+    flex-basis: $flex-item-width;
+    flex-direction: row;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 40px;
+  }
+}
+
+.faq__tagline {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: -5px;
+  }
+}
+
+.faq__subtitle {
+  @include text(24px, 700, 1, 0);
+  margin: 0;
+  margin-bottom: 23px;
+}
+
+.faq__text {
+  @include text(16px, 300, 24px, 0);
+  margin: 0;
+  margin-top: 12px;
+}
+
+.faq__img-wrapper {
+  overflow: hidden;
+  position: absolute;
+  margin-top: 25px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vw;
+  z-index: -1;
+
+  @media (min-width: $tablet-width) {
+    height: 80vw;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 60vw;
+  }
+
+  @media (min-width: $max-desktop-width) {
+    width: 100vw;
+    height: 60vw;
+    max-width: 2000px;
+    max-height: 1400px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.faq__img {
+  width: 400%;
+  height: auto;
+  bottom: -105px;
+  position: absolute;
+  left: -215vw;
+
+  @media (min-width: $tablet-width) {
+    bottom: -39vw;
+  }
+
+  @media (min-width: $max-desktop-width) {
+    width: 200%;
+    bottom: -15vw;
+    left: -90vw;
+  }
+
+  @media (min-width: 1600px) {
+    width: 150%;
+    bottom: -200px;
+    left: -800px;
+  }
+}

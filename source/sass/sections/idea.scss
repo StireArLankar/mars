@@ -1,0 +1,134 @@
+.idea {
+  position: relative;
+}
+
+.idea__wrapper {
+  padding: 69px $padding-mobile 30px;
+  position: relative;
+  max-width: $max-desktop-width;
+
+  @media (min-width: $tablet-width) {
+    padding: 35px $padding-tablet 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 35px $padding-desktop 30px;
+  }
+
+  @media (min-width: $max-desktop-width) {
+    margin: 0 auto;
+    padding-right: $padding-desktop-base;
+    padding-left: $padding-desktop-base;
+  }
+}
+
+.idea__tagline {
+  display: flex;
+  flex-direction: column;
+
+  // @media (min-width: $tablet-width) {
+   @media (min-width: 580px) {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: -3px;
+  }
+}
+
+.idea__container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    margin-top: 44px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 40px;
+  }
+}
+
+.idea__subtitle {
+  @include text(24px, 700, 1, 0);
+  margin: 0;
+  margin-bottom: 7px;
+  order: -2;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.idea__text {
+  @include text(16px, 300, 24px, 0);
+  margin: 0;
+  margin-top: 23px;
+  text-align: justify;
+
+  &--first {
+    order: -1;
+  }
+}
+
+.idea__img-wrapper {
+  margin-top: 67px;
+  width: 165px;
+  height: 189px;
+  background-color: $dark-blue;
+  box-shadow: 30px -30px 0px -10px $white-color,
+              30px -30px 0px 0px $red-color;
+
+  @media (max-width: $tablet-width - 1) {
+    margin-left: 50%;
+    transform: translate(-50%);
+  }
+
+  @media (min-width: $tablet-width) {
+    float: right;
+    margin-top: 64px;
+    margin-right: 33px;
+    margin-left: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 325px;
+    height: 373px;
+    margin-top: 18px;
+    margin-right: 52px;
+    box-shadow: 50px -50px 0px -10px $white-color,
+                50px -50px 0px 0px $red-color;
+  }
+}
+
+.idea__img {
+  width: 100%;
+  height: auto;
+}
+
+.idea__quote {
+  @include text(18px, 300, 24px, 0);
+  position: relative;
+  margin: 0;
+  padding: 24px 0 0;
+  color: $red-color;
+
+  &::before {
+    content: "“";
+    position: absolute;
+    top: 13px;
+    left: -14px;
+    font-size: 65px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 36px 0 0;
+
+    &::before {
+      top: 28px;
+    }
+  }
+}

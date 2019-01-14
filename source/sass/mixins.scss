@@ -4,25 +4,10 @@
   margin: 0;
 }
 
-@mixin text($fz, $fw: 400) {
+@mixin text($fz, $fw: 400, $lh: 1.0, $ls: 0.005em) {
   font-size: $fz;
   font-weight: $fw;
-  font-family: "Circe", "Arial", sans-serif;
-  line-height: 1.3;
-}
-
-@mixin title($fz, $ls) {
-  font-size: $fz;
-  font-weight: 700;
-  font-family: "PlayfairDisplay", "Arial", sans-serif;
-  line-height: 1;
+  font-family: "ProximaNova", "Arial", sans-serif;
+  line-height: $lh;
   letter-spacing: $ls;
-}
-
-@mixin tagline($fz) {
-  display: block;
-  font-size: $fz;
-  font-weight: 400;
-  font-family: "IntroScriptR", "Brush Script MT", sans-serif;
-  line-height: 1.2;
 }

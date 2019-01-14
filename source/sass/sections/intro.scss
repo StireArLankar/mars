@@ -1,0 +1,130 @@
+.intro {
+  background-image: url("../img/bg-1.jpg");
+  background-size: 100% 100%;
+  background-position: 50% 50%;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/bg-2.jpg");
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/bg-3.jpg");
+  }
+}
+
+.intro__wrapper {
+  position: relative;
+  padding: 141px $padding-mobile 166px;
+  color: $white-color;
+  text-align: center;
+  max-width: $max-desktop-width;
+
+  @media (min-width: $tablet-width) {
+    padding: 260px $padding-tablet 112px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 220px $padding-desktop 91px;
+  }
+
+  @media (min-width: $max-desktop-width) {
+    margin: 0 auto;
+    padding-right: $padding-desktop-base;
+    padding-left: $padding-desktop-base;
+  }
+}
+
+.intro__video-wrapper {
+  position: relative;
+  margin: 37px auto 0;
+  background-color: $black-color;
+  $temp: $mobile-width - 2 * $padding-mobile;
+  width: ( 214px / $temp ) * 100%;
+  padding-bottom: 48%;
+  box-shadow: 0 10px 20px 10px rgba($black-color, 0.4);
+
+  @media (min-width: $tablet-width) {
+    width: ( 214px / $temp ) * 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 51%;
+    padding-bottom: 34%;
+  }
+}
+
+.intro__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $dark-blue;
+}
+
+.intro__tagline {
+  @include text(13px, 300);
+  text-transform: uppercase;
+  text-align: justify;
+
+  &--regular {
+    font-weight: 400;
+  }
+
+  &--big {
+    font-weight: 700;
+    font-size: 75px;
+    margin-left: -3px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    letter-spacing: 0.025em;
+
+    &--big {
+      font-size: 170px;
+      margin-left: -10px;
+      line-height: 0.92;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 38px;
+    letter-spacing: 0;
+
+    &--big {
+      font-size: 207px;
+      margin-left: -10px;
+      line-height: 0.85;
+    }
+  }
+}
+
+.intro__description {
+  @include text(14px, 300, 1.2);
+  position: absolute;
+  width: 125px;
+  text-align: left;
+  left: 45%;
+  top: 67.2%;
+
+  @media (min-width: $tablet-width) {
+    left: 63.5%;
+    top: 83%;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 79.5%;
+    top: 62%;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 118px;
+      height: 1px;
+      background-color: $white-color;
+      top: 50%;
+      left: -113%;
+    }
+  }
+}

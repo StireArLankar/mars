@@ -1,0 +1,271 @@
+.problems {
+  color: $white-color;
+  background-color: $black-color;
+  background-image: url("../img/problems-bg-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 86px;
+    background-image: url("../img/problems-bg-2.jpg");
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 100px;
+    background-image: url("../img/problems-bg-3.jpg");
+  }
+}
+
+.problems__wrapper {
+  position: relative;
+  padding: 30px $padding-mobile 56px;
+  max-width: $max-desktop-width;
+
+  @media (min-width: $tablet-width) {
+    padding: 38px $padding-tablet 56px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 66px $padding-desktop 56px;
+  }
+
+  @media (min-width: $max-desktop-width) {
+    margin: 0 auto;
+    padding-right: $padding-desktop-base;
+    padding-left: $padding-desktop-base;
+  }
+}
+
+.problems__title {
+  margin: 0;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $desktop-width) {
+    margin-left: -3px;
+  }
+
+  @media (min-width: $max-desktop-width) {
+    flex-direction: row;
+    letter-spacing: -0.01em;
+  }
+}
+
+.problems__video-wrapper {
+  margin-top: 45px;
+  background-color: $white-color;
+  width: 100%;
+  padding-top: 60%;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 50%;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 57px;
+  }
+}
+
+.problems__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.problems__list {
+  margin-top: 43px;
+
+  @media (max-width: $tablet-width - 1) {
+    min-height: auto !important;
+  }
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    margin-top: 57px;
+    min-height: 421px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 70px;
+    min-height: 340px;
+  }
+}
+
+.problems__item {
+  margin-top: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+    margin-bottom: 51px;
+  }
+}
+
+.problems__btn {
+  @include text(18px, 300, 24px, 0.01em);
+  position: relative;
+  display: block;
+  opacity: 0.6;
+  margin: 0;
+  padding-right: 30px;
+  cursor: pointer;
+  color: $white-color;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 33%;
+  }
+
+  @media (min-width: $base-tablet-width + 100px) {
+    width: 28%;
+  }
+
+  @media (min-width: $desktop-width + 100px) {
+    width: 21%;
+  }
+}
+
+.problems__item--open .problems__btn {
+  font-weight: 700;
+  opacity: 1;
+
+  @media (max-width: $tablet-width - 1) {
+    &::after {
+      transform: rotate(-135deg);
+    }
+  }
+}
+
+.problems__arrow {
+  $size: 13px;
+
+  width: $size;
+  height: $size;
+
+  position: absolute;
+  right: 0;
+  border-right: 2px solid $white-color;
+  border-bottom: 2px solid $white-color;
+  top: calc(50% - 3px);
+  transform: rotate(-45deg);
+  transform-origin: 0 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.problems__item--open .problems__arrow {
+  $size: 13px;
+
+  @media (max-width: $tablet-width - 1) {
+    transform: rotate(-135deg);
+  }
+
+  @media (min-width: $tablet-width) {
+    animation-name: arrow-opacity;
+    animation-duration: 1.5s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+
+    &::after {
+      $offset: -18px;
+
+      width: $size;
+      height: $size;
+
+      content: '';
+      position: absolute;
+      opacity: 0.2;
+      right: $offset;
+      bottom: $offset;
+      border-right: 2px solid $white-color;
+      border-bottom: 2px solid $white-color;
+    }
+
+    &::before {
+      $offset: -10px;
+
+      width: $size;
+      height: $size;
+
+      content: '';
+      position: absolute;
+      opacity: 0.5;
+      right: $offset;
+      bottom: $offset;
+      border-right: 2px solid $white-color;
+      border-bottom: 2px solid $white-color;
+    }
+  }
+}
+
+@keyframes arrow-opacity {
+  0%   {opacity: 0.3;}
+  14%  {opacity: 0.4;}
+  28%  {opacity: 0.5;}
+  42%  {opacity: 0.6;}
+  56%  {opacity: 0.7;}
+  70%  {opacity: 0.8;}
+  85%  {opacity: 0.9;}
+  100% {opacity: 1.0;}
+}
+
+.problems__text-wrapper {
+  padding: 21px 0 10px;
+  display: block;
+
+  @media (max-width: $tablet-width - 1) {
+    overflow: hidden;
+    transition: max-height 0.5s ease-in;
+  }
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: opacity 0.5s ease-in;
+    opacity: 0;
+    width: 60%;
+    padding-top: 0;
+  }
+
+  @media (min-width: $base-tablet-width + 100px) {
+    width: 68%;
+  }
+
+  @media (min-width: $desktop-width + 100px) {
+    width: 75%;
+    padding-right: 100px;
+  }
+}
+
+.problems__item--open .problems__text-wrapper {
+  @media (min-width: $tablet-width) {
+    opacity: 1;
+  }
+}
+
+.problems__subtitle {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    margin: 0 0 31px;
+  }
+}
+
+.problems__text {
+  @include text(16px, 300, 24px, 0);
+  margin: 0;
+  margin-top: 12px;
+}
+
+

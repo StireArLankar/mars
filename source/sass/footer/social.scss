@@ -1,0 +1,25 @@
+$size: 30px;
+
+.social {
+  display: flex;
+  justify-content: center;
+}
+
+.social__item {
+  margin: 0 8px;
+  display: flex;
+}
+
+.social__icon {
+  $size: 30px;
+
+  width: $size;
+  height: $size;
+
+  @media (min-width: $tablet-width) {
+    $size: 35px;
+
+    width: $size;
+    height: $size;
+  }
+}

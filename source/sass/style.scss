@@ -4,9 +4,27 @@
 @import "mixins.scss";
 @import "normalize.scss";
 @import "common.scss";
+@import "blocks.scss";
 
 @import "header/header.scss";
-@import "header/header-nav.scss";
+
+@import "sections/intro.scss";
+
+@import "sections/facts.scss";
+
+@import "sections/faq.scss";
+
+@import "sections/idea.scss";
+
+@import "sections/signup.scss";
+
+@import "sections/problems.scss";
+
+@import "sections/colony.scss";
+@import "sections/article.scss";
+
+@import "sections/subscribe.scss";
+@import "sections/form.scss";
 
 @import "footer/footer.scss";
-@import "footer/footer-nav.scss";
+@import "footer/social.scss";

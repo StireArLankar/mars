@@ -1,0 +1,115 @@
+.subscribe {
+  background-color: $magenta-color;
+  color: $white-color;
+  background-image: url("../img/subscribe-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/subscribe-2.jpg");
+  }
+}
+
+.subscribe__wrapper {
+  padding: 45px 0 261px;
+  position: relative;
+  max-width: $max-desktop-width;
+
+  @media (min-width: $tablet-width) {
+    padding: 73px $padding-tablet 177px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 111px $padding-tablet 177px;
+  }
+
+  @media (min-width: $max-desktop-width) {
+    margin: 0 auto;
+    padding-right: $padding-desktop-base;
+    padding-left: $padding-desktop-base;
+  }
+}
+
+.subscribe__title {
+  letter-spacing: -0.01em;
+  padding: 0 $padding-mobile;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    width: 100%;
+    margin-bottom: 62px;
+    margin-left: -3px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 62px;
+  }
+
+  @media (min-width: 1118px) {
+    flex-direction: row;
+  }
+
+  @media (min-width: $max-desktop-width) {
+    letter-spacing: 0.003em;
+  }
+}
+
+.subscribe__description {
+  @include text(16px, 300, 24px, 0);
+  padding: 6px $padding-mobile 43px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    width: $flex-item-width;
+    order: 1;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 59%;
+    display: block;
+  }
+}
+
+.subscribe__text {
+  margin: 0;
+  margin-top: 25px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 25px;
+  }
+}
+
+.subscribe__link {
+  color: $white-color;
+  margin-top: 18px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.subscribe__form {
+  @media (max-width: $tablet-width - 1) {
+    max-width: 393px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: $flex-item-width;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 34.4%;
+  }
+}

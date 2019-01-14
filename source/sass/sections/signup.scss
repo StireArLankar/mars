@@ -1,0 +1,195 @@
+.signup {
+  position: relative;
+  margin-top: 160px;
+  max-width: $max-desktop-width;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 $padding-tablet;
+  }
+
+  @media (min-width: $base-tablet-width) {
+    margin-top: 56px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 $padding-desktop;
+  }
+
+  @media (min-width: $max-desktop-width) {
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: $padding-desktop-base;
+    padding-left: $padding-desktop-base;
+  }
+}
+
+.signup__wrapper {
+  background-color: $red-color;
+  color: $white-color;
+  padding: 69px $padding-mobile 54px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url("../img/signup-bg-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 10% 54px;
+    background-image: url("../img/signup-bg-2.jpg");
+  }
+
+  @media (min-width: $base-tablet-width) {
+    padding: 0 33px 54px;
+  }
+
+  @media (min-width: $desktop-width + 100px) {
+    padding-left: 37%;
+    padding-right: 63px;
+    background-image: url("../img/signup-bg-3.jpg");
+  }
+}
+
+.signup__row1 {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: $base-tablet-width) {
+    flex-direction: row;
+  }
+
+  @media (min-width: $desktop-width + 100px) {
+    padding: 0;
+  }
+}
+
+.signup__img-wrapper {
+  margin-top: -216px;
+  position: relative;
+  background-color: $black-color;
+  width: 290px;
+  padding-top: 290px;
+  flex-shrink: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-top: -150px;
+  }
+
+  @media (min-width: $base-tablet-width) {
+    margin-left: 15px;
+    margin-top: 0;
+    top: -46px;
+    width: 253px;
+    padding-top: 253px;
+  }
+
+  @media (min-width: $desktop-width + 100px) {
+    position: absolute;
+    top: -28px;
+    left: 27px;
+    width: 310px;
+    padding-top: 310px;
+  }
+}
+
+.signup__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.signup__text-wrapper {
+  margin-top: 37px;
+
+  @media (min-width: $base-tablet-width) {
+    margin-top: -22px;
+    margin-left: (20/667) * 100%;
+  }
+
+  @media (min-width: $desktop-width + 100px) {
+    width: 100%;
+    margin-top: 57px;
+    margin-left: 0;
+  }
+}
+
+.signup__title {
+  @include text(24px, 700);
+  margin: 0;
+}
+
+.signup__text {
+  @include text(16px, 300, 24px, 0);
+  margin: 0;
+  margin-top: 22px;
+  padding-right: 11px;
+}
+
+.signup__row2 {
+  margin-top: 37px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $base-tablet-width) {
+    margin-top: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width + 100px) {
+    margin-top: 19px;
+  }
+}
+
+.signup__row2 > * {
+  @media (min-width: $base-tablet-width) {
+    width: 30%;
+  }
+}
+
+.signup__row2 > .signup__cost {
+  @include text(60px, 300, 1, 0);
+  margin-left: -5px;
+  width: 190px;
+}
+
+.signup__tag {
+  @include text(23px, 300, 1, 0.01em);
+  margin-top: 23px;
+  position: relative;
+
+  &::after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    height: 1px;
+    background-color: $white-color;
+  }
+
+  @media (min-width: $base-tablet-width) {
+    margin-top: 0;
+
+    &::after {
+      width: 110%;
+      left: -15px;
+    }
+  }
+}
+
+.signup__link {
+  margin-top: 53px;
+
+  @media (min-width: $base-tablet-width) {
+    margin-top: 0;
+  }
+}

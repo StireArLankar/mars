@@ -1,0 +1,40 @@
+.form {
+  background-color: $magenta-color;
+  padding: 55px calc(#{$padding-mobile} + 15px) 68px;
+  background-image: url("../img/form-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 55px 45px 68px;
+    background-image: url("../img/form-2.jpg");
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 67px 68px 74px;
+  }
+}
+
+.form__title {
+  margin: 0;
+}
+
+.form__label {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__input {
+  @include text(16px, 300, 24px, 0);
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $white-color;
+  color: $white-color;
+  padding: 11px 9px;
+}
+
+.form__btn {
+  margin-top: 58px;
+}

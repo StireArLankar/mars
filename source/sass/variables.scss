@@ -1,31 +1,37 @@
 $white-color: #ffffff;
 $black-color: #000000;
-$red-color: #f50049;
-$pink-color: #fbebea;
+$red-color: #e12457;
+$pink-color: #fff5f8;
 $light-grey: #e7e7e7;
 $medium-grey: #dedede;
 $dark-grey: #898989;
+$metal-color: #9aa9b0;
+$magenta-color: #731d70;
+$dark-blue: #41358b;
 
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
 
 $mobile-width: 320px;
-$padding-mobile: 20px;
+$padding-mobile: 15px;
 
-$tablet-width: 768px;
-$padding-tablet-base: 20px;
+$base-tablet-width: 765px;
+$padding-tablet-base: 23px;
+$tablet-width: ($base-tablet-width + $mobile-width) / 2;
 
-$max-desktop-width: 1366px;
-$padding-desktop-base: 74px;
-$desktop-width: ($max-desktop-width + $tablet-width) / 2;
+$max-desktop-width: 1170px;
+$padding-desktop-base: 15px;
+$desktop-width: ($max-desktop-width + $base-tablet-width) / 2;
 
-$flex-item-width: 45%;
+$flex-item-width: 48%;
 
-$width-diff: $max-desktop-width - $tablet-width;
-$pad-diff: $padding-desktop-base - $padding-tablet-base;
+$width-diff: $max-desktop-width - $base-tablet-width;
+//$pad-diff: $padding-desktop-base - $padding-tablet-base;
+$pad-diff: $padding-tablet-base - $padding-desktop-base;
 
-$temp: $padding-tablet-base - $tablet-width * $pad-diff/ $width-diff;
+$temp: $padding-tablet-base - $base-tablet-width * $pad-diff/ $width-diff;
 $temp1: 100% * $pad-diff / $width-diff;
 
 $padding-tablet: calc(#{$temp} + #{$temp1});
 $padding-desktop: calc(#{$temp} + #{$temp1});
+//$padding-tablet: $padding-tablet-base;
