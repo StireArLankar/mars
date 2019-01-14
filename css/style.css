@@ -859,7 +859,7 @@ html {
       height: 60vw; } }
   @media (min-width: 1170px) {
     .faq__img-wrapper {
-      width: 100vw;
+      width: 99vw;
       height: 60vw;
       max-width: 2000px;
       max-height: 1400px;
@@ -1680,32 +1680,31 @@ html {
       left: 8px; } }
   @media (min-width: 967.5px) {
     .colony__btn {
-      -webkit-writing-mode: vertical-rl;
-          -ms-writing-mode: tb-rl;
-              writing-mode: vertical-rl;
-      text-orientation: mixed;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
       -webkit-transform: rotate(0deg);
               transform: rotate(0deg); }
       .colony__btn::before {
         top: 5px;
         left: -32px; }
       .colony__btn span {
+        -webkit-writing-mode: vertical-rl !important;
+            -ms-writing-mode: tb-rl !important;
+                writing-mode: vertical-rl !important;
+        text-orientation: mixed;
         -webkit-transform: rotate(180deg);
                 transform: rotate(180deg); } }
 
 @media (max-width: 541.5px) {
-  .colony__item:last-child {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; }
-    .colony__item:last-child .colony__btn {
-      -webkit-box-ordinal-group: 3;
-          -ms-flex-order: 2;
-              order: 2; } }
+  .colony__item:last-child .colony__btn {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2; } }
 
 @media (min-width: 542.5px) and (max-width: 966.5px) {
   .colony__item:last-child .colony__btn::before {
