@@ -259,7 +259,16 @@
   @media (min-width: $tablet-width) {
     z-index: 2;
     opacity: 1;
+    animation-name: rotate;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.5s;
+    transform-origin: left;
   }
+}
+
+@keyframes rotate {
+  0% {transform: perspective(800px) rotateY(90deg)}
+  100% {transform: perspective(800px) rotateY(0deg)}
 }
 
 .problems__item--closed .problems__text-wrapper {
