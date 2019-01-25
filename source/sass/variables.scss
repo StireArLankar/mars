@@ -17,7 +17,7 @@ $padding-mobile: 15px;
 
 $base-tablet-width: 765px;
 $padding-tablet-base: 23px;
-$tablet-width: ($base-tablet-width + $mobile-width) / 2;
+$tablet-width: ($base-tablet-width + $mobile-width) / 2 + 0.5px;
 
 $max-desktop-width: 1170px;
 $padding-desktop-base: 15px;

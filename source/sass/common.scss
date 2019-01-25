@@ -10,24 +10,6 @@ body {
 
   @include text(20px);
   color: $black-color;
-
-  &::after {
-    // content: '';
-    position: absolute;
-    // background-image: url("../img/fon320.jpg");
-    // background-image: url("../img/fon750.jpg");
-    background-image: url("../img/fon1170.jpg");
-    opacity: 0.4;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    // width: 320px;
-    // height: 7321px;
-    // width: 765px;
-    // height: 5785px;
-    width: 1600px;
-    height: 6102px;
-  }
 }
 
 a {

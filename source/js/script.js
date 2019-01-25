@@ -97,37 +97,21 @@ function debounce(func, wait = 20, immediate = true) {
 // problems
 (function() {
   const buttons = document.querySelectorAll('.problems__btn');
-  const textWrappers = document.querySelectorAll('.problems__text-wrapper');
   let currentOpen = document.querySelector('.problems__item--open');
-  const list = document.querySelector('.problems__list');
-  const maxHeight = [];
 
-  textWrappers.forEach(wrapper => {
-    const parent = wrapper.parentElement;
-    maxHeight.push(wrapper.scrollHeight);
-    if (!parent.classList.contains('problems__item--open')) {
-      wrapper.style.maxHeight = '0';
-    } else {
-      wrapper.style.maxHeight = wrapper.scrollHeight + 'px';
-    }
-  });
-
-  list.style.minHeight = Math.max(...maxHeight) + 'px';
-
-  buttons.forEach((button, index) =>
+  buttons.forEach((button) =>
     button.addEventListener('click', function(evt) {
-      toggleText(this, index);
+      toggleText(this);
     })
   );
 
-  function toggleText(that, index) {
+  function toggleText(that) {
     const parent = that.parentElement;
-    const textWrapper = parent.lastChild;
     if (!parent.classList.contains('problems__item--open')) {
-      textWrapper.style.maxHeight = maxHeight[index] + 'px';
+      parent.classList.remove('problems__item--closed');
       parent.classList.add('problems__item--open');
       currentOpen.classList.remove('problems__item--open');
-      currentOpen.lastChild.style.maxHeight = '0';
+      currentOpen.classList.add('problems__item--closed');
       currentOpen = parent;
     }
   }
@@ -142,7 +126,7 @@ function debounce(func, wait = 20, immediate = true) {
   let check;
   const maxHeight = [];
 
-  if (window.innerWidth < 542.5) {
+  if (window.innerWidth < 542) {
     check = false;
     textWrappers.forEach(wrapper => {
       const parent = wrapper.parentElement;
@@ -155,7 +139,7 @@ function debounce(func, wait = 20, immediate = true) {
     });
   }
 
-  if (window.innerWidth > 542.5) {
+  if (window.innerWidth >= 542) {
     check = true
     textWrappers.forEach(wrapper => {
       maxHeight.push(wrapper.scrollHeight);

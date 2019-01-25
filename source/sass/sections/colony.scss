@@ -14,6 +14,7 @@
   @media (min-width: $desktop-width) {
     padding: 97px $padding-desktop 52px;
     min-height: 1050px;
+    overflow: hidden;
   }
 
   @media (min-width: $max-desktop-width) {
@@ -79,6 +80,13 @@
   }
 }
 
+.colony__item {
+  @media (max-width: $tablet-width - 1) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .colony__article {
   @media (max-width: $tablet-width - 1) {
     display: flex;
@@ -95,6 +103,7 @@
     position: absolute;
     width: calc(100vw - 2 * #{$padding-tablet});
     left: $padding-tablet;
+    transition: opacity 0.3s ease-in-out;
   }
 
   @media (min-width: $desktop-width) {
@@ -107,9 +116,8 @@
   @media (min-width: $max-desktop-width) {
     width: 1050px;
     margin-left: 50%;
-    transform: translateX(-50%);
     right: auto;
-    left: 44px;
+    left: 44px - 525px;
   }
 }
 
@@ -122,9 +130,28 @@
     z-index: 1;
     opacity: 1;
   }
+
+  @media (min-width: $desktop-width) {
+    animation-name: fliping;
+    animation-duration: 0.4s;
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes fliping {
+  0% {transform: translate(75px, 75px)}
+  12% {transform: translate(72px, 50px)}
+  25% {transform: translate(69px, 30px)}
+  37% {transform: translate(65px, 20px)}
+  50% {transform: translate(60px, 15px)}
+  62% {transform: translate(55px, 10px)}
+  75% {transform: translate(45px, 6px)}
+  87% {transform: translate(20px, 3px)}
+  100% {transform: translate(0, 0)}
 }
 
 .colony__btn {
+  cursor: pointer;
   position: relative;
   @include text(20px, 700, 24px, 0);
   display: flex;
